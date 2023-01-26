@@ -1820,9 +1820,9 @@ class Analysis:
         :param no_external: Remove external method from the output (default False)
         :rtype: Iterator[MethodAnalysis]
         """
-        classname = bytes(classname)
-        methodname = bytes(methodname)
-        descriptor = bytes(descriptor)
+        # classname = bytes(classname, encoding='latin-1')
+        # methodname = bytes(methodname, encoding='latin-1')
+        # descriptor = bytes(descriptor, encoding='latin-1')
         for cname, c in self.classes.items():
             if re.match(classname, cname):
                 for m in c.get_methods():
